@@ -1,0 +1,97 @@
+---
+# Almost all linters; some of them are optional.
+
+run:
+  modules-download-mode: readonly
+  issues-exit-code: 0
+
+linters-settings:
+  exhaustive:
+    default-signifies-exhaustive: false
+  godot:
+    scope: toplevel
+    exclude:
+      - go-sumtype:decl
+      - check interfaces
+    capital: true
+  goimports:
+    local-prefixes: github.com/FerretDB/FerretDB
+  gosimple:
+    go: "1.18"
+    checks: ["all"]
+  lll:
+    line-length: 130
+    tab-width: 1
+  misspell:
+    locale: US
+    ignore-words:
+      - guiness # present in the test dataset
+  nolintlint:
+    allow-unused: false
+    allow-leading-space: false
+    allow-no-explanation: []
+    require-explanation: true
+    require-specific: true
+  staticcheck:
+    go: "1.18"
+    checks: ["all"]
+  stylecheck:
+    go: "1.18"
+    checks: ["all"]
+    dot-import-whitelist: []
+    initialisms: []
+    http-status-code-whitelist: []
+  unparam:
+    check-exported: true
+  unused:
+    go: "1.18"
+  whitespace:
+    multi-if: false
+    multi-func: false
+
+linters:
+  enable-all: true
+  disable:
+    # TODO configure and enable one by one
+    - cyclop
+    - dupl
+    - errcheck
+    - errname
+    - errorlint
+    - exhaustivestruct
+    - forcetypeassert
+    - funlen
+    - gochecknoglobals
+    - gochecknoinits
+    - gocognit
+    - gocritic
+    - gocyclo
+    - godox
+    - goerr113
+    - gomnd
+    - gosec
+    - ifshort
+    - ireturn
+    - nakedret
+    - revive
+    - thelper
+    - unparam
+    - varnamelen
+    - wrapcheck
+
+    # TODO enable when goanalysis_metalinter supports generics
+    - gosimple
+    - staticcheck
+    - stylecheck
+    - unused
+
+    - golint      # deprecated
+    - interfacer  # deprecated
+    - maligned    # deprecated
+    - nlreturn    # too annoying
+    - scopelint   # deprecated
+    - testpackage # we test internals
+    - wsl         # too annoying
+
+issues:
+  exclude-use-default: false
