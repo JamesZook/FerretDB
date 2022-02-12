@@ -10,11 +10,12 @@ require (
 	github.com/jackc/pgx/v4 v4.14.1
 	github.com/pmezard/go-difflib v1.0.0
 	github.com/stretchr/testify v1.7.0
-	go.uber.org/zap v1.19.1
+	go.uber.org/zap v1.21.0
 	golang.org/x/sys v0.0.0-20211029165221-6e7872819dc8
 )
 
 require (
+	github.com/benbjohnson/clock v1.1.0 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgio v1.0.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
