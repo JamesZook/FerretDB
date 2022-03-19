@@ -9,7 +9,7 @@ require (
 	github.com/jackc/pgerrcode v0.0.0-20201024163028-a0d42d470451
 	github.com/jackc/pgx/v4 v4.14.1
 	github.com/pmezard/go-difflib v1.0.0
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.1
 	go.uber.org/zap v1.19.1
 	golang.org/x/sys v0.0.0-20211029165221-6e7872819dc8
 )
