@@ -42,7 +42,7 @@ jobs:
         run: echo WEEK_NUMBER=$(date +%U) >> $GITHUB_ENV
 
       - name: Restore cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.GOCACHE }}
           key: test-${{ env.WEEK_NUMBER }}-${{ hashFiles('**/go.mod') }}-${{ hashFiles('**') }}
@@ -101,7 +101,7 @@ jobs:
         run: echo WEEK_NUMBER=$(date +%U) >> $GITHUB_ENV
 
       - name: Restore cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.GOCACHE }}
           key: lint-${{ env.WEEK_NUMBER }}-${{ hashFiles('**/go.mod') }}-${{ hashFiles('**') }}
@@ -174,7 +174,7 @@ jobs:
       # at least until https://github.com/golang/go/issues/48901 is resolved one way or another.
 
       - name: Restore cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ${{ env.GOCACHE }}
